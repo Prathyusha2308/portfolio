@@ -1,0 +1,267 @@
+[
+  {
+    "company": "Blue Cross Blue Shield",
+    "title": "Reliable pharmacy data at scale",
+    "category": "healthcare",
+    "subtitle": "AWS \u00b7 Snowflake \u00b7 dbt \u00b7 Airflow | Professional project summary",
+    "problem": "Pharmacy-benefit, medication-adherence, formulary, and clinical-quality data needed reliable daily processing for analytics and regulatory reporting. Quality checks and PHI controls were central to the workflow.",
+    "role": "Developed Python and PySpark ETL, modeled pharmacy analytics with dbt, orchestrated refreshes with Airflow, implemented validation, and tuned processing performance.",
+    "stages": [
+      [
+        "Ingest",
+        "Pharmacy data to AWS S3",
+        "Production Python and PySpark ETL processed 5\u201310 million pharmacy and clinical-quality records daily. AWS Glue extraction was coordinated through Airflow.",
+        [
+          "Python",
+          "AWS S3",
+          "AWS Glue"
+        ]
+      ],
+      [
+        "Transform",
+        "Bronze \u2192 Silver \u2192 Gold",
+        "Delta Lake medallion layers organized raw ingestion, standardization and validation, and curated analytics datasets. PySpark performed transformations before downstream modeling.",
+        [
+          "PySpark",
+          "Delta Lake",
+          "Medallion"
+        ]
+      ],
+      [
+        "Validate",
+        "Quality before promotion",
+        "Great Expectations and dbt tests checked schema, completeness, NDC format, formulary tiers, referential integrity, and business rules before production promotion.",
+        [
+          "Great Expectations",
+          "dbt tests"
+        ]
+      ],
+      [
+        "Model",
+        "Analytics in Snowflake",
+        "Modular Snowflake dbt models separated pharmacy business logic for adherence, formulary utilization, drug costs, and clinical quality. SQL, clustering-key, and dbt optimization reduced warehouse compute costs by 25%; Athena queried curated S3 datasets.",
+        [
+          "Snowflake",
+          "dbt",
+          "PHI controls"
+        ]
+      ],
+      [
+        "Operate",
+        "Orchestrate, monitor, optimize",
+        "Orchestrated 40+ Airflow DAGs, raising refresh SLA compliance from 88% to 99.2%. Partition tuning and incremental materialization reduced processing time by 30%. Dependency checks and alerts supported recovery; Docker and GitHub Actions supported tests and deployments.",
+        [
+          "Airflow",
+          "SQL tuning",
+          "Incremental processing"
+        ]
+      ]
+    ],
+    "quality": [
+      "Great Expectations and dbt checks for schema, completeness, NDC format, formulary tier, and business rules",
+      "Referential-integrity checks and reusable pharmacy transformations",
+      "Field-level PHI masking, column-level controls, and audit logging",
+      "Cited pharmacy-policy context for human review of RAG responses"
+    ],
+    "operations": [
+      "40+ Airflow DAGs coordinating Glue, PySpark, and Snowflake dbt runs",
+      "Dependency checks and alerts for delayed refreshes and pipeline recovery",
+      "Docker-packaged Python jobs and GitHub Actions tests and deployments",
+      "Snowflake query, clustering-key, and dbt model optimization"
+    ],
+    "outcomes": [
+      "99.2% pharmacy refresh SLA compliance, up from 88%",
+      "40+ Airflow DAGs orchestrating daily refreshes",
+      "30% reduction in pipeline processing time",
+      "25% reduction in Snowflake warehouse compute costs",
+      "5\u201310 million records processed daily"
+    ],
+    "tradeoffs": [
+      "Batch and streaming: daily refreshes served scheduled reporting; Kafka feeds supported near-real-time utilization tracking.",
+      "Layered data: Bronze, Silver, and Gold separated ingestion from standardized and curated datasets.",
+      "AI assistance: Bedrock and Claude supported documentation and validation work with human review and PHI safeguards."
+    ],
+    "explain": [
+      "At Blue Cross Blue Shield, I built production data workflows for pharmacy benefits and clinical-quality analytics. The main challenge was processing large daily volumes while keeping the data reliable and protecting PHI.",
+      "The workflow used AWS S3 and Glue for ingestion, PySpark and Delta Lake for processing, and Snowflake with dbt for analytics models. Airflow coordinated the dependencies, refreshes, checks, and alerts.",
+      "I implemented schema, completeness, NDC, formulary, and business-rule validation using Great Expectations and dbt tests. I also applied PHI masking, column-level access controls, and audit logging.",
+      "I orchestrated 40+ Airflow DAGs and improved pharmacy refresh SLA compliance from 88% to 99.2%. Partition tuning and incremental materialization reduced processing time by 30%. Snowflake query, clustering-key, and dbt model optimization reduced warehouse compute costs by 25%. I packaged Python jobs with Docker and automated tests and deployments with GitHub Actions."
+    ]
+  },
+  {
+    "company": "American Express",
+    "title": "A lakehouse for rewards analytics",
+    "category": "financial",
+    "subtitle": "Azure \u00b7 Databricks \u00b7 Delta Lake \u00b7 Kafka | Professional project summary",
+    "problem": "Card transactions, rewards redemptions, and member spending needed consistent cleansing and aggregation for rewards analytics, member reporting, and downstream business decisions.",
+    "role": "Developed Python and PySpark ETL, built parameterized ADF workflows, organized Delta Lake layers, supported streaming feeds and Power BI datasets, and maintained controlled deployments.",
+    "stages": [
+      [
+        "Ingest",
+        "Transaction and rewards data",
+        "Python and PySpark ETL on Azure Databricks ingested card transactions, rewards redemptions, and member spending into ADLS.",
+        [
+          "Python",
+          "Databricks",
+          "ADLS"
+        ]
+      ],
+      [
+        "Transform",
+        "Standardize in Delta Lake",
+        "Cleansing, deduplication, and business-rule transformations prepared data. Bronze, Silver, and Gold layers organized batch processing for daily spend and merchant-performance analytics. PySpark null, duplicate, and schema checks validated data before publication to Silver and Gold.",
+        [
+          "PySpark",
+          "Delta Lake"
+        ]
+      ],
+      [
+        "Stream",
+        "Near-real-time transactions",
+        "Built Spark Structured Streaming pipelines with Kafka on Azure Databricks, ingesting 1.2M+ card transaction events per hour into Delta Lake Bronze/Silver with sub-minute latency for rewards and fraud analytics.",
+        [
+          "Spark Structured Streaming",
+          "Kafka",
+          "Delta Lake"
+        ]
+      ],
+      [
+        "Serve",
+        "Curated analytics datasets",
+        "ADF and Databricks workflows loaded curated data into Synapse, Azure SQL, and PostgreSQL. Power BI dashboards supported rewards-program performance and card-member analytics.",
+        [
+          "ADF",
+          "Synapse",
+          "Power BI"
+        ]
+      ],
+      [
+        "Operate",
+        "Repeatable deployment and tuning",
+        "Spark repartitioning, liquid clustering, and query tuning reduced daily Databricks cluster execution time by 25%, lowering monthly Azure compute costs. Azure DevOps CI/CD supported deployments; Docker and GitHub Actions automated Python job tests and pipeline deployments.",
+        [
+          "Azure DevOps",
+          "Incremental loads",
+          "Spark tuning"
+        ]
+      ]
+    ],
+    "quality": [
+      "PySpark null, duplicate, and schema checks before publishing to Silver and Gold",
+      "SQL window functions, cleansing, and deduplication rules",
+      "Validated Kafka card transaction streams",
+      "Consistent Synapse and Azure SQL datasets for Power BI reporting"
+    ],
+    "operations": [
+      "Parameterized ADF and Databricks incremental workflows into Synapse, Azure SQL, and PostgreSQL",
+      "Azure DevOps CI/CD, Docker, and GitHub Actions tests and deployments",
+      "Spark repartitioning, liquid clustering, and query tuning",
+      "Agile collaboration on Power BI rewards and merchant dashboards"
+    ],
+    "outcomes": [
+      "1.2M+ card transaction events ingested per hour",
+      "Sub-minute streaming latency into Delta Lake Bronze/Silver",
+      "25% reduction in daily Databricks cluster execution time",
+      "Lower monthly Azure compute costs",
+      "Validated curated datasets for rewards and merchant analytics"
+    ],
+    "tradeoffs": [
+      "Batch and streaming: Spark batch jobs aggregated daily spend; Kafka supported faster transaction analytics.",
+      "Layered storage: medallion layers made raw, cleaned, and analytics-ready datasets easier to maintain.",
+      "Incremental loading: parameterized ADF workflows reduced repeated manual processing and accelerated data availability."
+    ],
+    "explain": [
+      "At American Express, I worked on data pipelines for card transactions, rewards redemptions, and member spending. The goal was to provide consistent data for rewards analytics and timely loyalty reporting.",
+      "I built Python and PySpark pipelines on Azure Databricks and published clean datasets through Delta Lake Bronze, Silver, and Gold. Spark Structured Streaming and Kafka ingested 1.2M+ events per hour into Bronze/Silver with sub-minute latency.",
+      "ADF and Databricks workflows loaded curated data into Synapse, Azure SQL, and PostgreSQL. I also worked on Kafka transaction feeds and Power BI datasets for rewards and card-member analytics.",
+      "I reduced daily Databricks cluster execution time by 25% through Spark repartitioning, liquid clustering, and query tuning. Parameterized ADF and Databricks workflows automated incremental loads; Azure DevOps, Docker, and GitHub Actions supported controlled testing and deployments."
+    ]
+  },
+  {
+    "company": "BHG Financial",
+    "title": "Trusted lending data foundations",
+    "category": "financial",
+    "subtitle": "AWS \u00b7 Redshift \u00b7 Airflow \u00b7 Power BI | Professional project summary",
+    "problem": "Loan origination, credit risk, borrower, and performance data needed reliable delivery into a reporting warehouse. Source and warehouse figures needed reconciliation for useful lending and portfolio analytics.",
+    "role": "Built production ETL, orchestrated extraction and loading, designed dimensional models, implemented reconciliation scripts, and supported portfolio dashboards and ETL deployment workflows.",
+    "stages": [
+      [
+        "Ingest",
+        "Lending sources to AWS",
+        "Python and PySpark ETL extracted loan origination, credit-risk, and borrower data from PostgreSQL into AWS S3 and Redshift.",
+        [
+          "Python",
+          "PySpark",
+          "AWS S3"
+        ]
+      ],
+      [
+        "Catalog",
+        "Discover and maintain schemas",
+        "Organized raw and curated loan data in AWS S3 with partitioned layouts and Glue Data Catalog tables. Glue crawlers supported schema discovery and catalog maintenance, efficient queries, and reliable downstream Redshift loads.",
+        [
+          "AWS Glue",
+          "Data catalog"
+        ]
+      ],
+      [
+        "Model",
+        "Dimensional warehouse design",
+        "Redesigned Redshift dimensional schemas using Kimball methodology and tuned distribution and sort keys across 15+ fact and dimension tables, improving portfolio query execution times by 40%.",
+        [
+          "Redshift",
+          "Star schema"
+        ]
+      ],
+      [
+        "Reconcile",
+        "Verify source against warehouse",
+        "Automated loan-count and balance reconciliation in Python between PostgreSQL sources and the warehouse, supporting reliable lending and portfolio reporting.",
+        [
+          "Python",
+          "Reconciliation",
+          "SQL"
+        ]
+      ],
+      [
+        "Deliver",
+        "Daily reporting and operations",
+        "Airflow orchestrated daily Glue extractions and Redshift loads with 99.5% pipeline uptime, delivering underwriting and portfolio risk reports 2 hours earlier each morning. Jenkins supported CI/CD and Power BI served reporting.",
+        [
+          "Airflow",
+          "Power BI",
+          "Jenkins"
+        ]
+      ]
+    ],
+    "quality": [
+      "Loan-count reconciliation",
+      "Outstanding-balance reconciliation",
+      "Glue schema discovery and catalog maintenance",
+      "Consistent warehouse models for portfolio reporting"
+    ],
+    "operations": [
+      "Airflow dependencies and operational alerts for daily Glue and Redshift loads",
+      "99.5% pipeline uptime and underwriting SLA delivery",
+      "Jenkins CI/CD for ETL deployments",
+      "Source-to-target design documentation for reconciliation, audit traceability, and handoff"
+    ],
+    "outcomes": [
+      "40% improvement in portfolio query execution times",
+      "15+ fact and dimension tables tuned with distribution and sort keys",
+      "99.5% pipeline uptime",
+      "Underwriting and portfolio risk reports delivered 2 hours earlier each morning"
+    ],
+    "tradeoffs": [
+      "Dimensional modeling: facts and business dimensions organized reporting around loans, performance, and borrower segments.",
+      "Reconciliation: counts and balances checked warehouse completeness against source data.",
+      "Orchestration: dependencies and alerts made daily report delivery easier to manage."
+    ],
+    "explain": [
+      "At BHG Financial, I built data workflows for lending and credit-risk analytics. We needed loan origination, borrower, and performance data in a reliable reporting warehouse.",
+      "I developed Python and PySpark pipelines into AWS S3 and Redshift. Airflow coordinated AWS Glue extraction and warehouse loading with dependency management and operational alerts.",
+      "I redesigned Redshift dimensional schemas using Kimball methodology and tuned distribution and sort keys across 15+ fact and dimension tables, improving portfolio query execution times by 40%. Python reconciled loan counts and balances against PostgreSQL sources.",
+      "Airflow DAGs coordinated Glue extraction and Redshift loading with 99.5% pipeline uptime. Underwriting and portfolio risk reports were delivered 2 hours earlier each morning. I also documented source-to-target design decisions for audits and team handoff."
+    ]
+  }
+]

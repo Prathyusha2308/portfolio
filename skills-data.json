@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Languages & processing",
+    "terms": [
+      "Python",
+      "PySpark",
+      "SQL",
+      "pandas",
+      "NumPy",
+      "Shell scripting",
+      "Apache Spark"
+    ]
+  },
+  {
+    "title": "Cloud & platforms",
+    "terms": [
+      "AWS S3",
+      "Glue",
+      "Redshift",
+      "Athena",
+      "CloudWatch",
+      "IAM",
+      "Azure Databricks",
+      "ADF",
+      "ADLS Gen2",
+      "Synapse",
+      "Azure SQL"
+    ]
+  },
+  {
+    "title": "Modeling & pipelines",
+    "terms": [
+      "Snowflake",
+      "dbt",
+      "Airflow",
+      "Delta Lake",
+      "Kafka",
+      "Spark Structured Streaming",
+      "CDC",
+      "Incremental loads",
+      "Kimball modeling",
+      "Star schema",
+      "Fact/dimension tables"
+    ]
+  },
+  {
+    "title": "Quality & delivery",
+    "terms": [
+      "Great Expectations",
+      "dbt tests",
+      "Data profiling",
+      "Schema validation",
+      "Reconciliation",
+      "Power BI",
+      "Excel",
+      "PHI controls"
+    ]
+  },
+  {
+    "title": "GenAI & retrieval",
+    "terms": [
+      "LLMs",
+      "RAG",
+      "Amazon Bedrock",
+      "Anthropic Claude",
+      "Source citations",
+      "Human review"
+    ]
+  },
+  {
+    "title": "Databases & SQL",
+    "terms": [
+      "PostgreSQL",
+      "Azure SQL",
+      "Query optimization",
+      "Snowflake clustering",
+      "Redshift distribution and sort keys"
+    ]
+  },
+  {
+    "title": "Governance & reliability",
+    "terms": [
+      "HIPAA-aligned controls",
+      "PHI handling",
+      "Access controls",
+      "Audit logging",
+      "SLA management",
+      "Pipeline monitoring"
+    ]
+  },
+  {
+    "title": "Engineering practices",
+    "terms": [
+      "Git",
+      "GitHub Actions",
+      "Jenkins",
+      "Docker",
+      "Azure DevOps",
+      "CI/CD",
+      "Agile/Scrum",
+      "Technical documentation"
+    ]
+  }
+]
