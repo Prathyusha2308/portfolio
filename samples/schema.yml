@@ -1,0 +1,23 @@
+# Illustrative dbt configuration. Save in models/schema.yml.
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: transaction_events
+
+models:
+  - name: stg_transactions
+    description: Synthetic transaction staging with explicit data contracts.
+    columns:
+      - name: record_id
+        data_tests:
+          - not_null
+          - unique
+      - name: member_id
+        data_tests:
+          - not_null
+      - name: quantity
+        data_tests:
+          - not_null
